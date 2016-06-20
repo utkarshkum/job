@@ -1,0 +1,33 @@
+<div ng-show="!showloading">
+<div class="page-header">
+	<h3>My Blogs</h3>
+</div>
+<div ng-controller="AccountController">
+	<div ng-repeat="blog in blogs">
+		<div class="panel panel-primary" style="width: 90%">
+			<div class="panel-heading">
+				<div style="float: right">{{blog.tag}}</div>
+				{{blog.blogName}}
+			</div>
+				<blockquote>
+					<p>{{blog.content}}</p>
+					<footer>{{blog.userName}}</footer>			
+				</blockquote>
+		</div>
+	</div>
+</div>
+<div class="page-header">
+	<h3>My Details</h3>
+</div>
+<div ng-controller="UserController">	
+	<div class="user panel panel-primary" ng-model="user">
+		<div class="panel-heading">
+			{{ user.userName }}
+		</div>
+		<div class="panel-body">
+		<b>{{ user.fullName }}</b>
+			{{ user.emailId }}
+		</div>
+	</div>
+</div>
+</div>
