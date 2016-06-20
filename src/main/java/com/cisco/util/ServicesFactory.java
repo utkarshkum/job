@@ -27,7 +27,7 @@ public class ServicesFactory {
 			MongoClient mongoClient = new MongoClient(connectionString);	
 			Morphia morphia = new Morphia();
 			morphia.mapPackage("com.cisco.model");
-			datastore = morphia.createDatastore(mongoClient, "smdb");
+			datastore = morphia.createDatastore(mongoClient, "jobdb");
 			datastore.ensureIndexes();
 			mongoTL.set(datastore);
 			return datastore;
